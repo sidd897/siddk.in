@@ -1,0 +1,3 @@
+[submodule "src/themes/shibui"]
+	path = src/themes/shibui
+	url = git@github.com:sidd897/shibui.git

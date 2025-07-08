@@ -1,0 +1,79 @@
+#+title: Read Me
+#+author: Siddhartha Kumar
+   #+date: 2025-07-08
+
+ #+language: en-us
+
+
+ This document pertains to building my personal website using
+ Hugo. Additionally, it contains information on how to generate SSL
+ certificates and store them on Godaddy's server.
+
+ The content for this website is written in Emacs' ~org-mode~, and are located
+ in ~files~ directory. Once we are ready with the content, we export them to
+ Hugo specific ~markdown~ files via the [[https://ox-hugo.scripter.co][ox-hugo]] package. The link [[https://weblog.masukomi.org/2024/07/19/using-org-mode-with-hugo/][here]] serves
+ as an excellent quick start guide on how to use this package.
+
+ We can develop and test website by first, entering a development environment
+ using ~nix~ as follows
+ #+begin_src bash
+   nix deveop
+ #+end_src
+ And, then starting a local server by running
+ #+begin_src bash
+   hugo server --source src/
+ #+end_src
+
+ Once done, one can deploy the website to Godaddy's server by simply
+ executing
+ #+begin_src bash
+   nix run .#hugo-build
+ #+end_src
+ 
+* SSL Certificates
+By default, Godaddy does not provide SSL certificates. This means that our
+website runs on the unsecured ~http~ protocol. SSL certificates enables
+websites to run on the much more secure ~https~ protocol. The following [[https://gist.github.com/johnnyshankman/e838792e28b2a51d9e34d65726f56431][Github
+Gist]] explains how to install SSL certificates on Godaddy's servers using
+[[https://github.com/acmesh-official/acme.sh][acme.sh]]. I won't get into it as the explanation is quite good and self
+sufficient. However, the gist is as follows.
++ SSH into the server, then
++ Install ~acme.sh~, and register ourselves with the default SSL certificate
+  provider by providing an email address like so
+  #+begin_src bash
+    curl https://get.acme.sh | sh -s email=my@example.com
+  #+end_src
+  One thing to note is that the current version of ~acme.sh~ generates the
+  certificates from [[https://zerossl.com/?fpr=marco29&gad_source=1&gad_campaignid=22412330082&gbraid=0AAAAA_Ct08fw8wfHGOYG94B6oMzaHsnb1&gclid=EAIaIQobChMI-pDPq5StjgMVrKNmAh23AiB7EAAYASAAEgJhcvD_BwE][ZeroSSL]] instead of [[https://letsencrypt.org/][Let's Encrypt]]. Fortunately, this does
+  not break anything for us!
++ Generate Godaddy API keys, then issue SSL certificates
+  #+begin_src bash
+    export GD_Secret=YOUR_SECRET export GD_Key=YOUR_KEY
+    .acme.sh/acme.sh --issue --dns dns_gd -d adomain.com -d *.adomain.com
+  #+end_src
++ Deploy them
+  #+begin_src bash
+    .acme.sh/acme.sh --deploy -d adomain.com --deploy-hook cpanel_uapi
+  #+end_src
+
+
+** GoDaddy API keys
+This is a requirement for generating SSL certificates. We can get them from
+[[https://developer.godaddy.com/keys][here]]. We have already obtained them, and are recorded in [[file:keys.org][keys.org]].[fn:1]
+
+
+** Updating the Certificates
+The certificates generated from ZeroSSL expire in 90 days. The implication of
+this is that one needs to update the certificates at Godaddy every 90
+days. The steps are easy: we just need to follow the last two items of [[SSL Certificates][SSL
+Certificates]].
+
+
+* Footnotes
+[fn:1] For obvious reasons =keys.org= is not included in this repository
+
+
+
+# Local Variables: 
+# jinx-local-words: "GoDaddy Godaddy Godaddy's ZeroSSL" 
+# End:

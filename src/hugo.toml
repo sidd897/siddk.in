@@ -1,0 +1,30 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'sidd.k'
+theme = "shibui"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[params]
+author = "Siddhartha Kumar"
+authorNativeName = "सिद्धार्थ कुमार"
+email = "siddhartha.kumar@qamcom.se"
+
+[menu]
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 1
+  [[menu.main]]
+    name = "Biography"
+    url = "/biography"
+    weight = 2
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume.pdf"
+    weight = 3
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications"
+    weight = 4

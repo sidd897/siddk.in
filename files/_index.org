@@ -1,0 +1,17 @@
+#+title: sidd.k
+#+author: Siddhartha Kumar
+
+
+ #+language: en-us
+
+ #+HUGO_BASE_DIR: ../src/
+ #+HUGO_SECTION: /
+
+ Senior Systems Engineer @ [[https://www.qamcom.com][Qamcom Research and Technology]]
+
+ Ph.D. with a proven track record of designing high performance algorithms
+ for distributed systems and advanced communication technologies. Penchant
+ for open source software, especially GNU/Linux, Emacs, and Lisp.
+
+ sidd.897.mc@gmail.com\\
+ [[https://www.linkedin.com/in/siddharthakumar/][LinkedIn]]

@@ -1,0 +1,109 @@
+#+title: Publications
+#+author: Siddhartha Kumar
+ #+date: 2025-07-04
+ 
+ #+language: en-us
+
+ #+HUGO_BASE_DIR: ../src/
+ #+HUGO_SECTION: /
+
+ 
+* Journals
+1. R. Schlegel, *S. Kumar*, E. Rosnes, A. Graell i Amat, "[[https://ieeexplore.ieee.org/document/10042414][Codedpaddedfl and
+   codedsecagg: Straggler mitigation and secure aggregation in federated
+   learning]]," IEEE Transactions on Communications, vol. 71, no. 4, Apr. 2023
+2. R. Schlegel, *S. Kumar*, E. Rosnes, A. Graell i Amat, "[[https://arxiv.org/abs/2110.03545][Privacy-Preserving
+   Coded Mobile Edge Computing for Low-Latency Distributed Inference]]," IEEE
+   Journal on Selected Areas in Communications (JSAC), vol. 40, no. 3,
+   Jan. 2022
+3. H.-Y. Lin, *S. Kumar*, E. Rosnes, A. Graell i Amat, E. Yaakobi,
+   "[[https://arxiv.org/abs/2007.10174][Multi-Server Weakly-Private Information Retrieval]]," IEEE Transactions on
+   Information Theory, vol. 68, no. 2, Feb. 2021
+4. H.-Y. Lin, *S. Kumar*, E. Rosnes, A. Graell i Amat, E. Yaakobi, "[[https://arxiv.org/abs/2001.08727][The
+   Capacity of Single-Server Weakly-Private Information Retrieval]]," IEEE
+   Journal on Selected Areas in Information Theory, vol. 2, no. 1, Mar.  2021
+5. *S. Kumar*, H.-Y. Lin, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/8643953][Achieving maximum
+   distance separable private information retrieval capacity with linear
+   codes]],” IEEE Transactions on Information Theory, vol. 65, no. 8, Aug.
+   2019
+6. *S. Kumar*, A. Graell i Amat, E. Rosnes, L. Senigagliesi, “[[https://ieeexplore.ieee.org/document/8669806][Private
+   Information Retrieval From a Cellular Network With Caching at the Edge]],”
+   IEEE Transactions on Communications, vol. 67, no. 7, Jul. 2019
+7. *S. Kumar*, A. Graell i Amat, I. Andriyanova, F. Brännström, E. Rosnes,
+   “[[https://ieeexplore.ieee.org/document/8418386][Code Constructions for Distributed Storage with Low Repair Bandwidth and
+   Low Repair Complexity]],” IEEE Transactions on Communications, vol. 66,
+   no. 12, Dec. 2018
+8. *S. Kumar*, E. Rosnes, A. Graell i Amat, “[[https://arxiv.org/abs/1605.08300][Secure Repairable Fountain Codes]],”
+   IEEE Communications Letters, vol. 20, no. 8, Aug. 2016
+
+
+* Conferences
+1. *S. Kumar*, M. H. Moghaddam, A. Wolfgang, T. Svensson, “[[https://arxiv.org/abs/2411.10228][Path Assignment in
+   Mesh Networks at the Edge of Wireless Networks]], ” in Proc. IEEE
+   International Conference on Communications (ICC) Workshop, Montreal,
+   Canada, Jun. 2025
+2. R. Schlegel, *S. Kumar*, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/9909849][Straggler-resilient
+   secure aggregation for federated learning]], ” in Proc. Eur. Signal
+   Process. Conf. (EUSIPCO), Belgrade, Serbia, Aug./Sep. 2022 (*Invited paper*)
+3. *S. Kumar*, R. Schlegel, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/9838986][Coding for Straggler
+   Mitigation in Federated Learning]], ” in Proc. IEEE International Conference
+   on Communications (ICC), Seoul, South Korea, May 2022
+4. A. Frigård, *S. Kumar*, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/9562193][Low-Latency
+   Distributed Inference at the Network Edge Using Rateless Codes]],” in
+   Proc. International Symposium on Wireless Communication Systems (ISWCS),
+   Berlin, Germany, Sep. 2021 (*Invited paper*)
+5. R. Schlegel, *S. Kumar*, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/9348077][Private Edge
+   Computing for Linear Inference Based on Secret Sharing]],” in Proc. IEEE
+   Global Communications Conference (GLOBECOM), Taipei, Taiwan, Dec. 2020
+6. H.-Y. Lin, *S. Kumar*, E. Rosnes, A. Graell i Amat, E. Yaakobi, “[[https://ieeexplore.ieee.org/document/9174048][The
+   Capacity of Single-Server Weakly-Private Information Retrieval]],” in
+   Proc. IEEE International Symposium on Information Theory (ISIT), Los
+   Angeles, CA, Jun. 2020
+7. H.-Y. Lin, *S. Kumar*, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/8989190][Improved Private
+   Information Retrieval for Coded Storage From Code Decomposition]],” in
+   Proc. IEEE Information Theory Workshop (ITW), Visby, Gotland, Sweden,
+   Aug. 2019 (*Invited paper*)
+8. *S. Kumar*, A. Graell i Amat, E. Rosnes, “[[https://ieeexplore.ieee.org/document/8815548][Private Information Retrieval in
+   Wireless Coded Caching]],” in Proc. IEEE International Workshop on Signal
+   Processing Advances in Wireless Communications (SPAWC), Cannes, France,
+   Jul. 2019 (*Invited paper*)
+9. H.-Y. Lin, *S. Kumar*, E. Rosnes, A. Graell i Amat, E. Yaakobi,
+   “[[https://ieeexplore.ieee.org/document/8849444][Weakly-Private Information Retrieval]],” in Proc. IEEE International
+   Symposium on Information Theory (ISIT), Paris, France, Jul. 2019
+10. *S. Kumar*, H.-Y. Lin, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/8613503][Local Reconstruction
+    Codes: A Class of MDS-PIR Capacity-Achieving Codes]],” in Proc. IEEE
+    Information Theory Workshop (ITW), Guangzhou, China, Nov. 2018
+11. H.-Y. Lin, *S. Kumar*, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/8613500][Asymmetry helps:
+    Improved private information retrieval protocols for distributed
+    storage]],” in Proc. IEEE Information Theory Workshop (ITW), Guangzhou,
+    China, Nov. 2018
+12. H.-Y. Lin, *S. Kumar*, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/8437804][An MDS-PIR
+    Capacity-Achieving Protocol for Distributed Storage Using Non-MDS Linear
+    Codes]],” in Proc. IEEE International Symposium on Information Theory
+    (ISIT), Vail, CO, Jun. 2018
+13. *S. Kumar*, E. Rosnes, A. Graell i Amat, “[[https://ieeexplore.ieee.org/document/8006763][Private Information Retrieval in
+    Distributed Storage Systems Using an Arbitrary Linear Code]],” in
+    Proc. IEEE International Symposium on Information Theory (ISIT), Aachen,
+    Germany, Jun. 2017
+14. *S. Kumar*, A. Graell i Amat, I. Andriyanova, F. Brännström, “[[https://ieeexplore.ieee.org/document/7417790][A Family of
+    Erasure Correcting Codes with Low Repair Bandwidth and Low Repair
+    Complexity]],” in Proc. IEEE Global Communications Conference (GLOBECOM),
+    San Diego, CA, Dec. 2015
+
+
+* Theses
+1. *S. Kumar*, “[[https://bora.uib.no/bora-xmlui/handle/1956/18691][Privacy, Security, and Repair in Distributed Storage Systems]],”
+   (Doctoral Thesis), University of Bergen, Aug. 2018
+2. *S. Kumar*, “[[https://odr.chalmers.se/items/c298f0f4-ff44-463f-9107-377d8c26f6d6][Repair Efficient Erasure Correcting Codes for Distributed
+   Storage Systems]],” (Master Thesis), Chalmers University of Technology,
+   Jun. 2015
+3. *S. Kumar*, “[[https://www.amrita.edu/news/emotion-recognition-in-human-computer-interaction/][Speaker Emotion Recognition for Human Computer Interaction]],”
+   (Bachelor Thesis), Amrita Vishwavidyapeetham, May 2013
+
+
+
+# Adding line-break for aesthetic reasons
+\\
+
+
+   
