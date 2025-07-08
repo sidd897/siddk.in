@@ -17,7 +17,7 @@
  We can develop and test website by first, entering a development environment
  using ~nix~ as follows
  #+begin_src bash
-   nix deveop
+   nix develop
  #+end_src
  And, then starting a local server by running
  #+begin_src bash
@@ -48,7 +48,8 @@ sufficient. However, the gist is as follows.
   not break anything for us!
 + Generate Godaddy API keys, then issue SSL certificates
   #+begin_src bash
-    export GD_Secret=YOUR_SECRET export GD_Key=YOUR_KEY
+    export GD_Secret=YOUR_SECRET
+    export GD_Key=YOUR_KEY
     .acme.sh/acme.sh --issue --dns dns_gd -d adomain.com -d *.adomain.com
   #+end_src
 + Deploy them
