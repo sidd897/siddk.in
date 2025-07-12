@@ -5,6 +5,11 @@ theme = "shibui"
 
 [markup.goldmark.renderer]
 unsafe = true
+[markup.highlight]
+guessSyntax = true
+lineNos = false
+noClasses = false             # required otherwise Hugo overrides the theme   
+tabWidth = 4
 
 [params]
 author = "Siddhartha Kumar"
