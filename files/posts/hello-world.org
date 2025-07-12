@@ -1,0 +1,10 @@
+#+title: Hello, World!
+#+author: Siddhartha Kumar
+ #+date: 2025-07-09
+
+ #+language: en-us
+
+ #+HUGO_BASE_DIR: ../../src/
+
+ So begins my blogging journey. Let there be light.
+
