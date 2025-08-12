@@ -1,7 +1,7 @@
 +++
 title = "Installing Guix"
 author = ["Siddhartha Kumar"]
-date = 2025-07-11
+date = 2025-08-12
 tags = ["Guix", "VMWare", "Apple", "M1"]
 draft = false
 +++
@@ -21,9 +21,10 @@ post, I will detail how to build an `aarch64` image tailored to
 run on [VMWare Fusion](https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion) for M series Mac machines.
 
 The **first step** is to install any GNU/Linux distribution on the VM. In my
-case, I installed [Ubuntu Server](https://ubuntu.com/download/server/arm). It is pretty lightweight and yet serves
-our purpose. On it, we must install the `Guix package manager`. One way is to run
-the following commands as root.
+case, I installed [Ubuntu Server](https://ubuntu.com/download/server/arm). It is pretty lightweight and yet serves our
+purpose. Make sure to create a partition of size at-most 5GB using the
+Ubuntu installation wizard. Next, we must install the `Guix package
+ manager`. One way is to run the following commands as root.
 
 ```bash
 cd tmp/
@@ -33,31 +34,29 @@ chmod +x guix-install.sh
 ```
 
 The **second step** is to update Guix. In particular, we update to the version at
-commit `83c749fb0a562ae193ecb2d880bc9aecf492878a`. This is done via
+commit `49e42ea01e6182b95639b0bb9c62c887f7eda095`. This is done via
 
 ```bash
-sudo -i guix pull --commit=83c749f
+sudo -i guix pull --commit=49e42ea
 ```
 
 The idea now is to leverage the `init` sub-command of `guix system` to populate a
-separate virtual disk with all the necessary files required for Guix
-installation. Once done, we boot from the said disk and start the Guix
+separate partition with all the necessary files required for Guix
+installation. Once done, we boot from the said partition and start the Guix
 installation process in earnest.
 
-To that end, as the **third step**, we add another disk to the virtual
-machine. This can be done via the GUI interface of VMWare Fusion. One then needs
-to format this disk. I typically format it with the `ext4` file system using the
-command
+To that end, we have already created a partition when we installed
+Ubuntu. As the **third step**, we label the partition using the command
 
 ```bash
-sudo mkfs.ext4 -L Guix_image /dev/nvme0n2
+sudo e2label /dev/nvme0n1p2 "Guix_image"
 ```
 
-where I have assumed that `/dev/nvme0n2` is the name of the new disk, and
-labeled it as `Guix_image`. Finally, we mount it to `/mnt` like so:
+where I have assumed that `/dev/nvme0n1p2` is the name of the new
+partition. Finally, we mount it to `/mnt` like so:
 
 ```bash
-sudo mount /dev/nvme0n2 /mnt
+sudo mount /dev/nvme0n1p2 /mnt
 ```
 
 Now to the **fourth step**. We create a Guile Scheme file,
@@ -74,19 +73,18 @@ previously mentioned disk.
  (inherit installation-os)
  (bootloader (bootloader-configuration
                 (bootloader grub-efi-bootloader)
-                (targets (list "/boot/efi"))
-                (keyboard-layout keyboard-layout)))
+                (targets (list "/boot/efi"))))
  (initrd-modules (cons "nvme" %base-initrd-modules)))
 ```
 
 The thing to note here is that we add the `nvme` kernel module to `initrd`. Without
-this, the installation image would fail to boot from our new `nvme` disk.
+this, the installation image would fail to boot from our `nvme` disk.
 
 Finally, in the **last step**, we execute the command below to populate the disk:
 
 ```bash
-sudo guix system init /path/to/installation-image.scm /mnt
+sudo $(type -P guix) system init /path/to/installation-image.scm /mnt
 ```
 
-Restarting the virtual machine and booting from `nvme0n2` will run the Guix
-installation wizard.
+Exit the virtual machine, and create a new virtual disk. This where Guix is
+to be installed. Booting from `nvme0n1p2` will run the Guix installation wizard.
